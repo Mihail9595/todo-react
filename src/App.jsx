@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import ToggleTheme from "./components/toggleTheme";
+import ToggleTheme from "./components/ToggleTheme";
 import { toggleThemes } from "./helpers/toggleTheme";
 import { getInitialTheme } from "./helpers/getInitialTheme";
 import DeleteConfirmModal from "./components/DeleteConfirmModal";
