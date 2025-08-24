@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import ToggleTheme from "./components/toggleTheme";
+import { toggleThemes } from "./helpers/toggleTheme";
 import { getInitialTheme } from "./helpers/getInitialTheme";
-import { toggleTheme } from "./helpers/toggleTheme";
 import DeleteConfirmModal from "./components/DeleteConfirmModal";
 import { useTodoManagement } from "./hooks/useTodoManagement";
 import DeletedCompletedButton from "./components/DeletedCompletedButton";
@@ -36,7 +36,7 @@ function App() {
       className="flex flex-col justify-center items-center bg-page-light
        dark:bg-page-dark p-6 min-h-screen"
     >
-      <ToggleTheme toggleTheme={() => toggleTheme(setTheme)} theme={theme} />
+      <ToggleTheme toggleTheme={() => toggleThemes(setTheme)} theme={theme} />
 
       <Suspense fallback={<Loader />}>
         <MainContent

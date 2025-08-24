@@ -1,4 +1,4 @@
-export const toggleTheme = (setTheme) => {
+export const toggleThemes = (setTheme) => {
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "light" ? "dark" : "light";
       localStorage.setItem("theme", newTheme);
